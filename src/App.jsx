@@ -1,10 +1,19 @@
-  
 
   
   const App = () => {
+
+    const city = ["Dhaka","Delhi" ,"Rajshahi","USA"]
     return (
       <div>
-        
+        <ul>
+
+{
+ city.map((item,i) => {
+return <li key ={i.toString()}>
+{item}
+</li>
+ })}
+        </ul>
       </div>
     );
   };
