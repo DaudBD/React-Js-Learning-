@@ -1,5 +1,70 @@
 
+ const isLoggedIn = true
+const App = () => {
+  return (
+    <div>
+
+      <h1> Login Button staus </h1>
+      {
+       isLoggedIn && <button>Login Button </button>
+
+      }
+    </div>
+  );
+};
+
+export default App;
+
+
+
+  {/* 
   
+  const App = () => {
+    const status = true
+    return (
+      <div>
+         {status ? <button>Login</button> : <button>Logout</button>}
+      </div>
+    );
+  };
+  
+  export default App;
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  {/* 
+const App = () => {
+  const status = true;
+
+  return (
+    <div>
+      {(() => {
+        switch (status) {
+          case true:
+            return <button>Login</button>;
+
+          case false:
+            return <button>Logout</button>;
+
+          default:
+            return null;
+        }
+      })()}
+    </div>
+  );
+};
+
+export default App;
+
+
+
+ This Invoked FUnction of React JS 
   const App = () => {
 
     const city = ["Dhaka","Delhi" ,"Rajshahi","USA"]
@@ -47,8 +112,7 @@ return <li key ={i.toString()}>
   
   
   
-  
-  {/*  This Invoked FUnction of React JS 
+
     
     const App = () => {
   let marks = 90;
