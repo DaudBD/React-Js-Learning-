@@ -1,4 +1,68 @@
+import Hero from "./Component/Hero";
 
+const App = () => {
+  const btnClick = () => {
+    alert("Say Hello!");
+  };
+
+  return (
+    <div>
+      <Hero childBtnClick={btnClick} />
+    </div>
+  );
+};
+
+export default App;
+
+
+
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Hero 
+//         title="learn React" 
+//         des="In Brief describe React"
+//       />
+//     </div>
+//   );
+// };
+
+// export default App;
+
+
+
+
+
+
+// const App = () => {
+
+//   let status = false
+//   return (
+//     <div>
+//     {(()=> {
+//      if (status === true){
+//       return <button>LogOut Button </button>
+//      } else {
+//       return <button>LogIn Button</button>
+//      }
+
+
+//     })()}
+//     </div>
+//   );
+// };
+
+// export default App;
+
+
+
+
+
+
+
+
+{/* 
  const isLoggedIn = true
 const App = () => {
   return (
@@ -17,7 +81,7 @@ export default App;
 
 
 
-  {/* 
+  
   
   const App = () => {
     const status = true
