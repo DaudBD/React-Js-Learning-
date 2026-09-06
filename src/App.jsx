@@ -1,18 +1,96 @@
-import Hero from "./Component/Hero";
 
-const App = () => {
-  const btnClick = () => {
-    alert("Say Hello!");
-  };
 
-  return (
-    <div>
-      <Hero childBtnClick={btnClick} />
-    </div>
-  );
-};
 
-export default App;
+
+
+
+
+
+
+
+// import  { useRef } from "react";
+
+// const App = () => {
+//   const firstName = useRef();
+//   const lastName = useRef();
+
+//   const change = () => {
+//     let fName = firstName.current.value;
+//     let lName = lastName.current.value;
+
+//     alert(`My Name Is ${fName} ${lName}`);
+//   };
+
+//   return (
+//     <div>
+//       <input ref={firstName} placeholder="firstName" />
+//       <br />
+
+//       <input ref={lastName} placeholder="lastName" />
+//       <br />
+
+//       <button onClick={change}>Click</button>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+
+
+
+
+// import  { useRef } from 'react';
+
+// const App = () => {
+
+// let myHeading = useRef ();
+
+// const change = () => {
+//   // myHeading.current.innerText =" Hello Use Ref";
+//   // myHeading.current.innerHTML ="<ul><li> A</li><li>B</li></ul>";
+//    myHeading.innerHTML ="<ul><li> A</li><li>B</li></ul>";
+  
+// }
+//   return (
+//     <div>
+
+//            <h1 ref= {(h1) => myHeading=h1}></h1>
+//       {/* <h1 ref= {myHeading}></h1> */}
+// <button onClick ={change}> CLICK </button>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+
+
+
+
+
+// const App = () => {
+
+// const event = (e) => {
+//   e.preventDefault();
+
+//   alert("Form Submitted")
+// }
+
+
+//   return (
+//     <div>
+//       <form onSubmit={event}>
+//  <input placeholder ="name"/>
+ 
+//  <button type="submit">Submit</button>
+
+//       </form>
+//     </div>
+//   );
+// };
+
+// export default App;
 
 
 
