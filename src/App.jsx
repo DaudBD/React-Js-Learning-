@@ -1,5 +1,66 @@
 
+//  import {TestComponent} from './TestComponent'; // named Export
+ import TestComponent from './TestComponent'; // Default Export
+// const App = () => {
+//   return (
+//     <div>
+//       <TestComponent/>
+//     </div>
+//   );
+// };
 
+// export default App;
+
+
+export default function TestComponent () {
+  return <h1> TestComponent </h1>;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useState } from 'react';
+// import "./app.css";
+// import card from "./Component/card.jsx";
+// const App = () => {
+
+// const [name ,setName] = useState();
+// const [set,setAge] = useState();
+// const [members,setMembers] = useState([
+//   {name:"Mir",age=24}
+//   {name : "mizan", age :30}
+//   {name : "aizan", age :20}
+//   {name : "rizan", age :30}
+// }]);
+
+// const handleSubmit = (e) => {
+//   e.preventDefault();
+// }
+// setMembers({name ,age})
+
+//   return (
+//     <div>
+//       <form>
+      
+
+
+//       </form>
+//     </div>
+//   );
+// };
+
+// export default App;
 
 
 
