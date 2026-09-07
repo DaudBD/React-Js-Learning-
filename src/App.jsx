@@ -1,20 +1,21 @@
 
 //  import {TestComponent} from './TestComponent'; // named Export
  import TestComponent from './TestComponent'; // Default Export
-// const App = () => {
-//   return (
-//     <div>
-//       <TestComponent/>
-//     </div>
-//   );
-// };
-
-// export default App;
-
-
-export default function TestComponent () {
-  return <h1> TestComponent </h1>;
+const App = () => {
+  return (
+    <div>
+      <TestComponent/>
+    </div>
+  );
 };
+
+export default App;
+
+
+// export default function TestComponent() {
+//   return 
+//   <h1>TestComponent</h1>
+// }
 
 
 
