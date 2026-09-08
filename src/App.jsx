@@ -1,15 +1,35 @@
 
 //  import {TestComponent} from './TestComponent'; // named Export
- import TestComponent from './TestComponent'; // Default Export
+//  import TestComponent from './TestComponent'; // Default Export
+
+import Card from "./Components/Card";
+
 const App = () => {
   return (
     <div>
-      <TestComponent/>
+        <Card name="Arif" age ={37}/>
+       <Card name="Adiyan" age ={4}/>
+
     </div>
   );
 };
 
 export default App;
+
+
+
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Card firstName ="Arif" lastName="Islam" age ={31}>
+
+//         <h1>Welcome To React</h1> </Card>
+//     </div>
+//   );
+// };
+
+// export default App;
 
 
 // export default function TestComponent() {
