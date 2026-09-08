@@ -1,23 +1,41 @@
-
 //  import {TestComponent} from './TestComponent'; // named Export
 //  import TestComponent from './TestComponent'; // Default Export
 
 import Card from "./Components/Card";
-
 const App = () => {
+  const members = [
+    { name: "Arif", age: 30 },
+    { name: "Adi", age: 10 },
+    { name: "Jerin", age: 50 },
+    { name: "Daud", age: 40 },
+  ];
+
   return (
     <div>
-        <Card name="Arif" age ={37}/>
-       <Card name="Adiyan" age ={4}/>
-
+      {members
+        .filter((member) => member.age > 18).sort((a,b) => a.age -b.age)
+        .map((member) => (
+          <Card name={member.name} age={member.age} />
+        ))}
     </div>
   );
 };
 
 export default App;
 
+// const App = () => {
+//   return (
+//     <div>
+//         <Card name="Arif" age ={37}/>
+//        <Card name="Adiyan" age ={4}/>
+//           <Card name="Adi" age ={44}/>
 
+//               <Card name="Daud" age ={54}/>
+//     </div>
+//   );
+// };
 
+// export default App;
 
 // const App = () => {
 //   return (
@@ -31,25 +49,10 @@ export default App;
 
 // export default App;
 
-
 // export default function TestComponent() {
-//   return 
+//   return
 //   <h1>TestComponent</h1>
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import React, { useState } from 'react';
 // import "./app.css";
@@ -73,8 +76,6 @@ export default App;
 //   return (
 //     <div>
 //       <form>
-      
-
 
 //       </form>
 //     </div>
@@ -82,13 +83,6 @@ export default App;
 // };
 
 // export default App;
-
-
-
-
-
-
-
 
 // import  { useRef } from "react";
 
@@ -118,10 +112,6 @@ export default App;
 
 // export default App;
 
-
-
-
-
 // import  { useRef } from 'react';
 
 // const App = () => {
@@ -132,7 +122,7 @@ export default App;
 //   // myHeading.current.innerText =" Hello Use Ref";
 //   // myHeading.current.innerHTML ="<ul><li> A</li><li>B</li></ul>";
 //    myHeading.innerHTML ="<ul><li> A</li><li>B</li></ul>";
-  
+
 // }
 //   return (
 //     <div>
@@ -146,11 +136,6 @@ export default App;
 
 // export default App;
 
-
-
-
-
-
 // const App = () => {
 
 // const event = (e) => {
@@ -159,12 +144,11 @@ export default App;
 //   alert("Form Submitted")
 // }
 
-
 //   return (
 //     <div>
 //       <form onSubmit={event}>
 //  <input placeholder ="name"/>
- 
+
 //  <button type="submit">Submit</button>
 
 //       </form>
@@ -174,14 +158,11 @@ export default App;
 
 // export default App;
 
-
-
-
 // const App = () => {
 //   return (
 //     <div>
-//       <Hero 
-//         title="learn React" 
+//       <Hero
+//         title="learn React"
 //         des="In Brief describe React"
 //       />
 //     </div>
@@ -189,11 +170,6 @@ export default App;
 // };
 
 // export default App;
-
-
-
-
-
 
 // const App = () => {
 
@@ -207,7 +183,6 @@ export default App;
 //       return <button>LogIn Button</button>
 //      }
 
-
 //     })()}
 //     </div>
 //   );
@@ -215,14 +190,8 @@ export default App;
 
 // export default App;
 
-
-
-
-
-
-
-
-{/* 
+{
+  /* 
  const isLoggedIn = true
 const App = () => {
   return (
@@ -362,4 +331,5 @@ return <li key ={i.toString()}>
   );
 };
 
-export default App;*/}
+export default App;*/
+}
