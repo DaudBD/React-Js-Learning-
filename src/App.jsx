@@ -1,99 +1,103 @@
-//  import {TestComponent} from './TestComponent'; // named Export
-//  import TestComponent from './TestComponent'; // Default Export
-// import Card from "./Components/Card";
-import "./Components/style.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+let [data,setData] = useState();
+
 
 const App = () => {
-  let [FormObj, setObjForm] = useState({
-    fName: "",
-    lName: "",
-    city: "",
-    gender: "",
-  });
+  useEffect(() => {
+    fetch("https://dummyjson.com/products")
+    .then(response => response.json())
+    .then(json=>setData(json))
 
-  const inputOnChange = (property, value) => {
-    setObjForm((prevObj) => ({
-      ...prevObj,
-      [property]: value,
-    }));
-  };
+  },[]);
 
-  const FormSubmit = (e) => {
-    e.preventDefault();
-    console.log(FormObj);
-  };
-
-  return (
-    <div className="container">
-      <form onSubmit={FormSubmit}>
-        <input
-          onChange={(e) => {
-            inputOnChange("fName", e.target.value);
-          }}
-          value={FormObj.fName}
-          placeholder="First Name"
-        />
-        <br />
-        <input
-          onChange={(e) => {
-            inputOnChange("lName", e.target.value);
-          }}
-          value={FormObj.lName}
-          placeholder="Last Name"
-        />
-        <br />
-        <select
-          onChange={(e) => {
-            inputOnChange("city", e.target.value);
-          }}
-          value={FormObj.city}
-        >
-          <option value="">Choose City</option>
-          <option value="Rajshahi">Rajshahi</option>
-          <option value="Dhaka">Dhaka</option>
-        </select>
-        <br />
-        <input
-          onChange={() => {
-            inputOnChange("gender", "Male");
-          }}
-          checked={FormObj.gender === "Male"}
-          type="radio"
-          name="gender"
-        />
-        Male
-        <input
-          onChange={() => {
-            inputOnChange("gender", "Female");
-          }}
-          checked={FormObj.gender === "Female"}
-          type="radio"
-          name="gender"
-        />
-        Female
-        <br />
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default App;
 
+//  import {TestComponent} from './TestComponent'; // named Export
+//  import TestComponent from './TestComponent'; // Default Export
+// import Card from "./Components/Card";
+// import "./Components/style.css";
+// import { useState } from "react";
 
+// const App = () => {
+//   let [FormObj, setObjForm] = useState({
+//     fName: "",
+//     lName: "",
+//     city: "",
+//     gender: "",
+//   });
 
+//   const inputOnChange = (property, value) => {
+//     setObjForm((prevObj) => ({
+//       ...prevObj,
+//       [property]: value,
+//     }));
+//   };
 
+//   const FormSubmit = (e) => {
+//     e.preventDefault();
+//     console.log(FormObj);
+//   };
 
+//   return (
+//     <div className="container">
+//       <form onSubmit={FormSubmit}>
+//         <label For="fName">First Name</label>
+//         <input
+//           onChange={(e) => {
+//             inputOnChange("fName", e.target.value);
+//           }}
+//           value={FormObj.fName}
+//           placeholder="First Name"
+//         />
+//         <br />
+//         <input
+//           onChange={(e) => {
+//             inputOnChange("lName", e.target.value);
+//           }}
+//           value={FormObj.lName}
+//           placeholder="Last Name"
+//         />
+//         <br />
+//         <select
+//           onChange={(e) => {
+//             inputOnChange("city", e.target.value);
+//           }}
+//           value={FormObj.city}
+//         >
+//           <option value="">Choose City</option>
+//           <option value="Rajshahi">Rajshahi</option>
+//           <option value="Dhaka">Dhaka</option>
+//         </select>
+//         <br />
+//         <input
+//           onChange={() => {
+//             inputOnChange("gender", "Male");
+//           }}
+//           checked={FormObj.gender === "Male"}
+//           type="radio"
+//           name="gender"
+//         />
+//         Male
+//         <input
+//           onChange={() => {
+//             inputOnChange("gender", "Female");
+//           }}
+//           checked={FormObj.gender === "Female"}
+//           type="radio"
+//           name="gender"
+//         />
+//         Female
+//         <br />
+//         <button type="submit">Submit</button>
+//       </form>
+//     </div>
+//   );
+// };
 
-
-
-
-
-
-
-
-
+// export default App;
 
 // const App = () => {
 //   const members = [
